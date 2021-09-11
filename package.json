@@ -1,0 +1,25 @@
+{
+  "name": "Movie-Database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarenHarley/Movie-Database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarenHarley/Movie-Database/issues"
+  },
+  "homepage": "https://github.com/KarenHarley/Movie-Database#readme"
+}

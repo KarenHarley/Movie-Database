@@ -12,34 +12,17 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api", api);
 // Connect to database
-<<<<<<< HEAD
 const db = mysql.createConnection(
   {
     host: "localhost",
     //MySQL username,
     user: "root",
     // MySQL password
-
-    password: "harleyHorse",
+    password: "",
     database: "movies_db", //database name that you want to connect too
   },
   console.log(`Connected to the movies_db database.`)
 );
-=======
-//const db = mysql.createConnection(
-//{
-//   host: "localhost",
-// MySQL username,
-//   user: "root",
-// MySQL password
-
-//    password: "",
-//    database: "movies_db", //database name that you want to connect too
-//  },
-//  console.log(`Connected to the movies_db database.`)
-
-//);
->>>>>>> 80742ef40bd33c71a833e717df60ab294c557390
 
 //GET route for
 app.get("/", (req, res) => console.log(res));

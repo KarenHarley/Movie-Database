@@ -17,6 +17,9 @@ const movieRouter = require("./moives");
 
 router.use("/movies", movieRouter);
 
+// POST request to create movie
+const addRouter = require("./add-movies");
+router.use("/add_movie", addRouter);
 
 
 module.exports = router;

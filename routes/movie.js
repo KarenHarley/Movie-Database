@@ -15,8 +15,23 @@ const db = mysql.createConnection(
 //DELETE route for api/notes/:id
 router.delete("/:id", (req, res) => {
     console.log("delete route works")
- // const requestedId = req.params.id.toLowerCase();
-  
+ const sql = `DELETE FROM movies WHERE id = ?`;
+ const params = [req.params.id];
+
+ db.query(sql, params, (err, result) => {
+   if (err) {
+     res.status(400).json({ error: err.message });
+   } else if (!result.affectedRows) {
+     res.json({
+       message: 'Movie not found'
+     });
+   } else {
+     res.json({
+       message: 'deleted Movie',
+       changes: result.affectedRows
+     });
+   }
+ });
 });
 
 module.exports = router;

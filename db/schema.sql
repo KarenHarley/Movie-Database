@@ -4,16 +4,16 @@ CREATE DATABASE movies_db;
 USE movies_db;
 
 CREATE TABLE movies (
-  id AUTO_INCREMENT INT NOT NULL,
-  movies_name VARCHAR(100)
+  id INT NOT NULL AUTO_INCREMENT,
+  movies_name VARCHAR(100),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE reviews (
-  id AUTO_INCREMENT INT NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
   movie_id INT,
   review TEXT,
- -- PRIMARY KEY (id)--
+  PRIMARY KEY (id),
   FOREIGN KEY (movie_id)
   REFERENCES movies(id)
   ON DELETE SET NULL

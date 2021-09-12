@@ -1,6 +1,17 @@
 const updateReview = require('express').Router();
+const mysql = require("mysql2");
+const db = mysql.createConnection(
+  {
+    host: "localhost",
+    //MySQL username,
+    user: "root",
+    // MySQL password
 
-
+    password: "harleyHorse",
+    database: "movies_db", //database name that you want to connect too
+  },
+  console.log(`Connected to the movies_db database.`)
+);
 // PUT Route for updating a review name
 updateReview.put('/api/review/:id', (req, res) => {
     const sql = `UPDATE reviews SET review = ? WHERE id = ?`;

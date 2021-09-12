@@ -19,7 +19,7 @@ app.use("/api", api);
 //   user: "root",
 // MySQL password
 
-//    password: "iandaniel",
+//    password: "",
 //    database: "movies_db", //database name that you want to connect too
 //  },
 //  console.log(`Connected to the movies_db database.`)

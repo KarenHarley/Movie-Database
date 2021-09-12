@@ -19,14 +19,19 @@ const db = mysql.createConnection(
     // MySQL username,
     user: "root",
     // MySQL password
-    password: "harleyHorse",
+
+    password: "iandaniel",
     database: "movies_db", //database name that you want to connect too
   },
-  console.log(`Connected to the moives_db database.`)
+  console.log(`Connected to the movies_db database.`)
+
+
 );
 
 //GET route for 
 app.get("/", (req, res) => console.log(res));
+
+
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)

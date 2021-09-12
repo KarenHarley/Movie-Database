@@ -21,7 +21,6 @@ updateReview.put('/:id', (req, res) => {
     db.query(sql, params, (err, result) => {
       if (err) {
         res.status(400).json({ error: err.message });
-        console.log("not working")
       } else if (!result.affectedRows) {
         res.json({
           message: 'Movie not found'

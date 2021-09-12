@@ -10,8 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//Middleware for handling static requests
-app.use(express.static("public"));
 
 app.use("/api", api);
 // Connect to database
@@ -21,10 +19,10 @@ const db = mysql.createConnection(
     // MySQL username,
     user: "root",
     // MySQL password
-    password: "",
-    database: "classlist_db", //database name that you want to connect too
+    password: "harleyHorse",
+    database: "movies_db", //database name that you want to connect too
   },
-  console.log(`Connected to the classlist_db database.`)
+  console.log(`Connected to the moives_db database.`)
 );
 
 //GET route for 
@@ -33,3 +31,5 @@ app.get("/", (req, res) => console.log(res));
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
+
+//module.exports = db;

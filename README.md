@@ -1,3 +1,3 @@
 # Movie-Database
 
-Hello World
+This is a command line app.

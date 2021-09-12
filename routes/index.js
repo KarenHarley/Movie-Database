@@ -1,19 +1,10 @@
-//const express = require("express");
-//const express = require('express');
+
 const router = require("express").Router();
 // Import our modular routers for /api/review
 const updateReviewRouter = require('./update-review');
-
-//change the app to the router for best practice
-//const app = express();
-
 // GET Route for update review
-router.use('/review/:id', updateReviewRouter);
-
-//module.exports = app;
-
-
-const movieRouter = require("./moives");
+const movieRouter = require("./movies");
+const addMoive = require("./add-movies");
 
 router.use("/movies", movieRouter);
 
@@ -21,6 +12,8 @@ router.use("/movies", movieRouter);
 const addRouter = require("./add-movies");
 router.use("/add_movie", addRouter);
 
+router.use("/review", updateReviewRouter);
+// router.use("/", addMoive);
 
 module.exports = router;
 

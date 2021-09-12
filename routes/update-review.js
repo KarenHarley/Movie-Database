@@ -10,10 +10,11 @@ const db = mysql.createConnection(
     password: "",
     database: "movies_db", //database name that you want to connect too
   },
-  console.log(`Connected to the movies_db database.`)
+  console.log(`Connected to the movies_db database.this works`)
 );
 // PUT Route for updating a review name
-updateReview.put('/api/review/:id', (req, res) => {
+updateReview.put('/:id', (req, res) => {
+  console.log("hi")
     const sql = `UPDATE reviews SET review = ? WHERE id = ?`;
     const params = [req.body.review, req.params.id];
   

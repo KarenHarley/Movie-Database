@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const api = require("./routes/index.js");
-const mysql = require("mysql2");
+//const mysql = require("mysql2");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -11,19 +11,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api", api);
-// Connect to database
-const db = mysql.createConnection(
-  {
-    host: "localhost",
-    //MySQL username,
-    user: "root",
-    // MySQL password
-
-    password: "harleyHorse",
-    database: "movies_db", //database name that you want to connect too
-  },
-  console.log(`Connected to the movies_db database.`)
-);
 
 //GET route for
 app.get("/", (req, res) => console.log(res));

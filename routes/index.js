@@ -4,11 +4,13 @@ const router = require("express").Router();
 const updateReviewRouter = require('./update-review');
 // GET Route for update review
 const movieRouter = require("./movies");
-const addMoive = require("./add-movies");
+const addMovie = require("./add-movies");
+const deleteMovie = require("./movie");
 
 router.use("/movies", movieRouter);
 router.use("/review", updateReviewRouter);
-router.use("/", addMoive);
+router.use("/", addMovie);
+router.use("/movie", deleteMovie);
 
 module.exports = router;
 
